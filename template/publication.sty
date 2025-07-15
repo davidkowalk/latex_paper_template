@@ -1,0 +1,122 @@
+%Remove before publication
+\usepackage[hpos=0.5\paperwidth, % .98 to prevent bleed
+            vpos=0.5\paperheight,
+            angle=45,
+            scale = 3,
+            text = ENTWURF]{draftwatermark}
+
+
+\usepackage{multicol}
+\usepackage{lipsum} % For placeholder text
+
+\usepackage{ragged2e}
+\usepackage{titling}
+\usepackage[hidelinks]{hyperref}
+\usepackage[title]{appendix}
+
+\usepackage[a4paper,margin=1.5cm]{geometry}
+
+% Renew \maketitle to be raggedright
+\renewcommand{\maketitle}{%
+  \begin{flushleft}
+    \textbf{\sffamily\LARGE \thetitle}\\
+    \vspace{10pt}
+    \large \theauthor\\
+    \putaffil
+    \vspace{5pt}
+    \putcontact\\
+    \vspace{5pt}
+    \small \thedate
+  \end{flushleft}
+  \vspace{10pt}
+}
+
+\renewenvironment{abstract}{%
+  \begin{flushleft}
+    \textbf{\sffamily\large Abstract}
+    \vspace{-10pt}
+  \end{flushleft}
+  \justifying
+}{
+    \vspace{5pt}
+    \hrule
+    \putkeywords
+    \par
+}
+
+%==============================
+%Organization info
+\newcommand{\affil}[2][]{
+    \ifx\affillist\undefined
+        \gdef\affillist{\ifx#1\empty\else\textsuperscript{#1*}\fi#2}%%{#1}%
+    \else
+        \g@addto@macro\affillist{, \ifx#1\empty\else\textsuperscript{#1*}\fi#2}%
+    \fi
+}
+
+\newcommand{\putaffil}{
+    \ifx\affillist\undefined
+    \else
+        \vspace{5pt}
+        \small\affillist\\
+    \fi
+}
+
+%==============================
+%Contact info
+%\newcommand{\contactlist}{}
+
+% Add a contact to the list
+\newcommand{\contact}[1]{%
+  \ifx\contactlist\undefined
+    \gdef\contactlist{#1}%
+  \else
+    \g@addto@macro\contactlist{, #1}%
+  \fi
+}
+
+% Print the contact list
+\newcommand{\putcontact}{%
+  \noindent
+  \small
+  \contactlist
+}
+
+%==============================
+%Multiple Authors
+\renewcommand{\author}[2][]{
+    \ifx\theauthor\undefined
+    %\gdef\theauthor{#1}%
+    \gdef\theauthor{#2\ifx#1\empty\else\textsuperscript{#1*}\fi}%
+  \else
+    %\g@addto@macro\theauthor{, #1}%
+    \g@addto@macro\theauthor{, #2\ifx#1\empty\else\textsuperscript{#1*}\fi}%
+  \fi
+}
+
+%==============================
+%Set Keywords
+
+\newcommand{\keywords}[1]{%
+    \gdef\keywordlist{#1}%
+}
+
+% Print the contact list
+\newcommand{\putkeywords}{%
+  \ifx\keywordlist\undefined
+  \else
+  \vspace{5pt}
+  \small
+  \noindent
+  \textbf{Keywords: }
+  \keywordlist
+  \fi
+}
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}{\thesubsubsection.}{1em}{}

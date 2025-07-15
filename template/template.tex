@@ -1,0 +1,56 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{publication}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+% Title formatting
+\title{A Simple LaTeX Template for Scientific Articles}
+
+\author[1]{Author 1}
+\contact{contact@email.org}
+\affil[1]{Organization Name}
+
+\author{Author 2}
+\contact{contact2@email.org}
+
+\keywords{Keyword 1, Keyword 2, Keyword 3}
+\date{\today}
+
+\begin{document}
+
+%\input{header_macro.tex}
+\maketitle
+
+% Abstract with justification
+\begin{abstract}
+    An abstract is a brief summary of a research article, or any in-depth analysis of a particular subject, and is often used to help the reader quickly ascertain the paper's purpose \cite{techwrite}.
+    It should function as a complete work and not contain citations.
+    Academic literature uses the abstract to succinctly communicate complex research. An abstract may act as a stand-alone entity instead of a full paper.
+\end{abstract}
+
+% Two-column layout
+\begin{multicols}{2}
+
+
+\section{Lorem Ipsum}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. \cite[p. 1]{myarticle} Aenean nec laoreet elit. Morbi a metus vestibulum, porta nisi et, pulvinar quam. Quisque facilisis vestibulum consequat. Donec semper sem eget diam cursus, id faucibus tortor iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam porta quam sed enim pharetra vulputate vel ac elit. Integer facilisis, nibh sit amet congue rhoncus, urna mauris luctus est, eu gravida ex erat quis dolor. Sed vel metus placerat, imperdiet massa ut, facilisis lorem. Aliquam non libero auctor, sollicitudin sem et, elementum arcu. Praesent elementum erat a cursus pulvinar. Fusce scelerisque arcu nec suscipit fringilla. Quisque venenatis mi quis justo tristique, in venenatis dolor tincidunt. Phasellus non lobortis risus. Morbi sed molestie quam, eget aliquam turpis. Quisque commodo eget justo vel congue.
+
+\subsection{Dolor Sit Amet}
+Duis dignissim ex in tellus ullamcorper dignissim. Ut egestas euismod quam nec vehicula. Nulla ultrices, ipsum vel ornare sollicitudin, ante leo commodo metus, nec convallis magna mi vitae ex. Quisque ac velit neque. Aliquam mollis, ante eget feugiat efficitur, lectus velit sollicitudin metus, sit amet cursus nibh purus eget leo. Sed in augue vitae mauris finibus pulvinar. Fusce in mi erat. Fusce consequat ullamcorper neque, ac lobortis felis aliquet in. Nam viverra condimentum diam, sit amet ultrices magna scelerisque nec. Integer interdum magna turpis, at pulvinar ipsum pulvinar quis. Donec aliquam ante finibus, vulputate purus sed, porttitor purus. Nunc sed dui a lectus blandit mollis. Aliquam a magna urna. Fusce fermentum nibh non nisl auctor, vitae ultricies arcu malesuada. Sed luctus vitae tortor ut pretium. 
+
+
+\end{multicols}
+
+\nocite{*} %This ensures all citations are shown, even when unused
+\printbibliography
+
+\newpage
+
+\begin{appendices}
+    \section{Information}
+    You may put additional information here
+\end{appendices}
+
+\end{document}
