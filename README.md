@@ -16,6 +16,8 @@ The package provides a simple way to define keywords. Keywords are automatically
 Section and subsection titles are identified by their numbering, not the font size. All titles have a font size consistent with the text font.
 - **Multi-Column**\
 Multiple columns are implemented using the `multicol` package. This implements an environment allowing the user to define the number of columns directly in the code.
+- **ArXiv Compatibility**\
+This template only uses [dependencies supported by Arxiv](https://info.arxiv.org/help/texlive_package_list.html) and is compliant with the [ArXiv Policies for Format Requirements](https://info.arxiv.org/help/policies/format_requirements.html), with the exception of the removable draft watermark.
 
 ## Dependencies
 Only common dependencies are required. As such this template is completely ArXiv compatible using the pdflatex compiler. (Compare [this list](https://info.arxiv.org/help/texlive_package_list.html))
