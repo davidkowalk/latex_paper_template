@@ -9,7 +9,7 @@ The template is highly adaptable and easy to use.
 ## Features
 
 - **Multiple Authors**\
-The template supports an arbitrary amount of authors, contact information and affiliations. The Authors can be linked to their affiliations with an arbitrary identifier, which is printed in superscript.
+The template supports an arbitrary number of authors, contact information and affiliations. The Authors can be linked to their affiliations with an arbitrary identifier, which is printed in superscript.
 - **Keywords**\
 The package provides a simple way to define keywords. Keywords are automatically printed by the `abstract` environment as well as the `\noabstract` command, or can be printed manually by `\putkeywords`.
 - **Consistent Title Sizes**\

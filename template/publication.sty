@@ -35,7 +35,7 @@
 
 \renewenvironment{abstract}{%
   \begin{flushleft}
-    \textbf{\sffamily\large Abstract}
+    \textbf{\sffamily\normalsize Abstract}
     \vspace{-10pt}
   \end{flushleft}
   \justifying
@@ -123,10 +123,13 @@
   \fi
 }
 
+%==============================
+%Title Formatting
+
 \usepackage{titlesec}
 \titleformat{\section}
-  {\normalfont\normalsize\bfseries}{\thesection.}{1em}{}
+  {\sffamily\normalsize\bfseries}{\thesection.}{1em}{}
 \titleformat{\subsection}
-  {\normalfont\normalsize\bfseries}{\thesubsection.}{1em}{}
+  {\sffamily\normalsize\bfseries}{\thesubsection.}{1em}{}
 \titleformat{\subsubsection}
-  {\normalfont\normalsize\itshape}{\thesubsubsection.}{1em}{}
+  {\sffamily\normalsize\itshape}{\thesubsubsection.}{1em}{}
